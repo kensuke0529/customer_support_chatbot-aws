@@ -452,10 +452,8 @@
     </div>
 
     <script>
-        // Use relative URL for production, localhost for development
-        const API_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
-            ? 'http://127.0.0.1:9900/chat' 
-            : '/api/chat';
+        // Always call the backend relative to the current origin
+        const API_URL = '/chat';
         let threadId = null;
         let isWaiting = false;
 
